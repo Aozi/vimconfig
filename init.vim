@@ -34,12 +34,11 @@ Plug 'vim-ruby/vim-ruby'
 "Misc
 Plug 'bronson/vim-trailing-whitespace'
 
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 call plug#end()
 
-
-colorscheme NeoSolarized
+colorscheme solarized
 syntax enable
 set background=dark
 
@@ -47,9 +46,9 @@ set nocompatible
 set tabstop=4 "Tab size
 set softtabstop=4 "Tab to space size
 
-"set t_Co=256 256 color mode
+set t_Co=256 "256 color mode
 
-set termguicolors
+"set termguicolors
 
 set number "show line number
 set showcmd "Display comnmands
@@ -111,3 +110,7 @@ let g:deoplete#sources#omni#input_patterns = {
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " tern
 autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+
+"rainbow parentheses
+"
+au VimEnter * RainbowParentheses
